@@ -52,10 +52,34 @@ src/main/java/edu/eci/arsw/blueprints
 ### 2. Buenas prácticas de API REST (Errores Http)
 - Usa **códigos HTTP** correctos:  
   - `200 OK` (consultas exitosas).  Todas las peticiones GET.
+
+    [Mensaje 200 endpoint:/](img/200.png)
+
+    [Mensaje 200 endpoint: /{author}](img/200_2.png)
+
+    [Mensaje 200 endpoint: /{author}/{bpname](img/200_3.png)
+
   - `201 Created` (creación).  La peticioón POST.
+
+    [Mensaje 201 endpoint: /](img/201.png)
+
   - `202 Accepted` (actualizaciones).  La petición PUT.
+
+    [Mensaje 202 endpoint: /](img/202.png)
+
   - `400 Bad Request` (datos inválidos). Peticiones POST y PUT. 
+
+    [Mensaje 400 post](img/400.png)
+
+    [Mensaje 400 put](img/400_2.png)
+
   - `404 Not Found` (recurso inexistente o no se encuentra la data solicitada). Peticiones GET y PUT.
+
+    [Mensaje 404 put](img/404.png)
+
+    [Mensaje 404 get](img/404_2.png)
+
+  En este punto se puede observar que si funcionan los errores Http en todos los endpoints, se observa que funciona el 200, 201, 202, 400, 404 correctamente en sus casos correspondientes
 ### 3. Buenas prácticas de API REST (Respuesta estandar)
 - Implementa una clase genérica de respuesta uniforme:
   ```java
